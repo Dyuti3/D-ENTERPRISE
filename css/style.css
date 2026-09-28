@@ -290,7 +290,7 @@ header.site-header {
   .stat-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.5rem; }
 
   /* COURSES */
-  #courses { background: var(--dark2); padding: 7rem 2rem;}
+  #courses { background: var(--dark); padding: 7rem 2rem;}
   .courses-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
@@ -316,7 +316,7 @@ header.site-header {
   .course-card p { font-size: 0.82rem; line-height: 1.8; color: var(--text-muted); }
 
   /* RESULTS / GALLERY */
-  .results-bg { background: var(--dark2); }
+  .results-bg { background: var(--dark); }
   .gallery-note {
     text-align: center; font-size: 0.8rem; color: var(--text-muted);
     letter-spacing: 0.05em; margin-bottom: 2.5rem;
@@ -426,7 +426,7 @@ header.site-header {
   .btn-price-outline:hover { border-color: var(--gold); color: var(--gold); }
 
   /* FAQ */
-  #faq { background: var(--dark2); }
+  #faq { background: var(--dark); }
   .faq-list { max-width: 740px; margin: 0 auto; }
   .faq-item {
     border: 1px solid var(--border); margin-bottom: 0.8rem;
@@ -455,7 +455,7 @@ header.site-header {
   .faq-item.open .faq-a { max-height: 300px; padding: 0 1.8rem 1.5rem; }
 
   /* SOCIAL */
-  #social { background: var(--dark2); }
+  #social { background: var(--dark); }
   .social-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.2rem;
