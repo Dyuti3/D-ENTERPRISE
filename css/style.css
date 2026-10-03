@@ -480,8 +480,8 @@ header.site-header {
   .social-card.fb .follow { color: #5AA0FF;  border-color: rgba(90,160,255,0.6);}
   .social-card.insta { border-bottom-color: rgba(230,139,207,0.6);}
   .social-card.insta .follow { border-color: rgba(230,139,207,0.6); color: #E68BCF;}
-  .social-card.yt { border-bottom-color: rgba(255, 36, 36,0.6);}
-  .social-card.yt .follow {color: rgba(255, 36, 36,0.6);  border-color: rgba(255, 36, 36,0.6);}
+  .social-card.yt { border-bottom-color: rgb(255, 45, 45);}
+  .social-card.yt .follow {color: rgb(255, 45, 45);  border-color: rgb(255, 45, 45);}
   
 
   /* CONTACT FORM */
