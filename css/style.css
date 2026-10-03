@@ -183,7 +183,7 @@ header.site-header {
     padding: 0.55rem 1.5rem;
     border: 1px solid var(--gold);
     color: var(--gold) !important;
-    font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+    font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500;
     text-decoration: none;
     transition: all 0.3s;
   }
@@ -461,19 +461,28 @@ header.site-header {
     gap: 1.2rem;
   }
   .social-card {
-    border: 1px solid var(--border); padding: 2rem 1.8rem;
-    display: flex; align-items: center; gap: 1.2rem;
+    position: relative;
+    border: 1px solid var(--border); padding: 3rem 1.8rem; border-radius: 10px;
+    display: flex; flex-direction: column; align-items: center; gap: 1.2rem;
     text-decoration: none; color: var(--cream);
-    background: var(--dark2);
+    background: hsla(0, 0%, 100%, 15%);
     transition: border-color 0.3s, transform 0.3s;
   }
+  .social-card .platform { position: absolute; right: 5%; top: 5%;}
+  .social-card .platform img { width: 40px; height: 40px;}
+  .social-card .profile { display: flex; gap: 20px; align-items: center; justify-content: center;}
+  .social-card .profile .profile-img img { border-radius: 50%; width: 100px; height: 100px;}
+  .social-card .profile .profile-details { display: flex; flex-direction: column; }
+  .social-card .profile-details .platform-name { color: white; font-size: 28px; font-weight: 700;}
+  .social-card .follow { position: absolute; bottom: 9%; right: 5%; background: transparent; border: 1px solid white; border-radius: 10px; color: white; padding: 5px 15px; cursor: pointer; text-decoration: none; font-size: 12px; font-weight: 500;}
   .social-card:hover { border-color: var(--gold); transform: translateY(-3px); }
-  .social-icon { font-size: 2rem; }
-  .social-info .platform {
-    font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 0.25rem;
-  }
-  .social-info .handle { font-size: 0.9rem; }
+  .social-card.fb { border-bottom-color: rgba(90,160,255,0.6);}
+  .social-card.fb .follow { color: #5AA0FF;  border-color: rgba(90,160,255,0.6);}
+  .social-card.insta { border-bottom-color: rgba(230,139,207,0.6);}
+  .social-card.insta .follow { border-color: rgba(230,139,207,0.6); color: #E68BCF;}
+  .social-card.yt { border-bottom-color: rgba(255, 36, 36,0.6);}
+  .social-card.yt .follow {color: rgba(255, 36, 36,0.6);  border-color: rgba(255, 36, 36,0.6);}
+  
 
   /* CONTACT FORM */
   .form-bg { background: var(--dark); }
