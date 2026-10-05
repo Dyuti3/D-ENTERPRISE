@@ -241,11 +241,11 @@ header.site-header {
   .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
   .btn-outline {
     padding: 0.85rem 2.5rem;
-    border: 1px solid rgba(245,240,232,0.3); color: var(--cream);
+    border: 1px solid white; color: white;
     font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
     text-decoration: none; font-weight: 400;
     transition: border-color 0.3s, color 0.3s;
-    display: inline-block;
+    display: inline-block; font-weight: 500;
   }
   .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
 
@@ -325,20 +325,16 @@ header.site-header {
   .screenshot-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1rem;
+    gap: 24px;
   }
   .screenshot-placeholder {
-    background: var(--dark3);
-    border: 1px solid var(--border);
-    aspect-ratio: 4/3;
+    background: rgba(255,255,255,0.03);  backdrop-filter: blur(10px);
+    border: 1px solid var(--gold); border-radius: 12px;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
-    gap: 0.5rem; color: var(--text-muted);
-    font-size: 0.75rem; letter-spacing: 0.1em;
     transition: border-color 0.3s;
   }
-  .screenshot-placeholder:hover { border-color: var(--gold); }
-  .screenshot-placeholder span { font-size: 2rem; }
+  .screenshot-placeholder:hover { transform: translateY(-6px);  border-color: rgba(212, 175, 55, 0.5);}
 
   /* VIDEO REVIEWS */
   #reviews { background: var(--dark); }
