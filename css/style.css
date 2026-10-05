@@ -140,6 +140,11 @@ body { background: var(--dark); color: var(--cream); font-family: 'Montserrat', 
   .whatsapp-float:hover { transform: scale(1.12); }
   .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
 
+/* Native Dialog Styling */
+dialog { border: none; border-radius: 12px; padding: 0; max-width: 90vw; max-height: 90vh; background: transparent; overflow-x: hidden; overflow-y: scroll; margin: auto;}
+dialog::backdrop { background: rgba(0,0,0,0.8); backdrop-filter: blur(4px);}
+.close-btn { position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.6); color: white; border: none; font-size: 24px; cursor: pointer; border-radius: 50%; width: 36px; z-index: 10;}
+
 /* HEADER */
 header.site-header {
     width: 100%; height: auto;
