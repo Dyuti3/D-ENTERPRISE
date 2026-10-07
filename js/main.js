@@ -3,7 +3,7 @@ const modal = document.getElementById('media-modal');
 const modalContent = document.getElementById('modal-content');
 const closeBtn = document.getElementById('close-modal');
 
-document.querySelectorAll('.screenshot-placeholder').forEach(thumb => {
+document.querySelectorAll('.media').forEach(thumb => {
   thumb.addEventListener('click', () => {
     const mediaType = thumb.dataset.type;
     const src = thumb.dataset.src;
@@ -14,8 +14,13 @@ document.querySelectorAll('.screenshot-placeholder').forEach(thumb => {
       const img = document.createElement('img');
       img.src = src;
       modalContent.appendChild(img);
+    } else if (mediaType === 'video') {
+      const vid = document.createElement('video');
+      vid.src = src;
+      vid.controls = true;
+      vid.autoplay = true;
+      modalContent.appendChild(vid);
     }
-
     document.body.style.overflow = "hidden";
     modal.showModal();
   });
