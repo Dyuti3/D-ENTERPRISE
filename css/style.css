@@ -346,7 +346,7 @@ header.site-header {
   /* VIDEO REVIEWS */
   #reviews { background: var(--dark); }
   .video-grid {
-    display: grid; grid-template-columns: repeat(2, 350px);
+    display: grid; grid-template-columns: repeat(2, 300px);
     grid-template-rows: repeat(2, 250px);
     gap: 3rem;
     justify-content: center;
