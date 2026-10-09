@@ -8,6 +8,9 @@
     --cream2: #EDE8DF;
     --text-muted: #8A8A8A;
     --border: rgba(201,168,76,0.2);
+    --box-bg: snow;
+    --box-col1: goldenrod;
+    --box-col2: #000947;
 }
 
 /* cormorant-garamond-300 - cyrillic_cyrillic-ext_latin_latin-ext_vietnamese */
@@ -276,7 +279,7 @@ header.site-header {
   .section-title em { font-style: italic; color: var(--gold-light); }
   .section-sub {
     text-align: center; color: var(--text-muted);
-    font-size: 0.88rem; line-height: 1.9; max-width: 600px; margin: 0 auto 4rem;
+    font-size: 0.88rem; line-height: 1.9; max-width: 600px; margin: 0 auto 4rem; font-weight: 400;
   }
 
   /* STATS */
@@ -286,14 +289,14 @@ header.site-header {
     margin-bottom: 5rem;
   }
   .stat {
-    background: var(--dark2); padding: 2.5rem 2rem; text-align: center;
+    background: var(--box-bg); padding: 2.5rem 2rem; text-align: center;
   }
   .stat-num {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem; font-weight: 400; color: var(--gold);
+    font-size: 3rem; font-weight: 400; color: var(--box-col1);
     line-height: 1;
   }
-  .stat-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.5rem; }
+  .stat-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--box-col2); margin-top: 0.5rem; }
 
   /* COURSES */
   #courses { background: var(--dark); padding: 7rem 2rem;}
@@ -303,7 +306,7 @@ header.site-header {
   }
   .course-card {
     border: 1px solid var(--border); padding: 2.5rem 2rem;
-    background: var(--dark2);
+    background: hsla(0, 0%, 100%, 15%);
     transition: border-color 0.3s, transform 0.3s;
     position: relative; overflow: hidden;
   }
@@ -354,7 +357,7 @@ header.site-header {
     margin: 0 auto;
   }
   .video-card {
-    background: var(--dark2); border: 1px solid var(--border); position: relative;
+    background: var(--dark2); border: 1px solid var(--border); position: relative; border-radius: 8px;
     overflow: hidden; transition: border-color 0.3s, transform 0.3s;
   }
   .video-card:hover { border-color: var(--gold); transform: translateY(-3px); }
@@ -374,6 +377,7 @@ header.site-header {
     border: 1px solid var(--border); background: var(--dark2);
     padding: 2.5rem 2rem; position: relative;
     transition: transform 0.3s, border-color 0.3s;
+    background: linear-gradient(160deg, var(--dark2) 0%, rgba(201,168,76,0.04) 100%);
   }
   .price-card:hover { transform: translateY(-5px); border-color: var(--gold); }
   .price-card.featured {
@@ -390,21 +394,21 @@ header.site-header {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem; font-weight: 400; margin-bottom: 0.5rem;
   }
-  .price-desc { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1.8rem; line-height: 1.7; }
+  .price-desc { font-size: 0.78rem; font-weight: 400; color: var(--text-muted); margin-bottom: 1.8rem; line-height: 1.7; }
   .price-amount {
     font-family: 'Cormorant Garamond', serif;
     font-size: 3rem; color: var(--gold); line-height: 1; margin-bottom: 0.3rem;
   }
   .price-amount span { font-size: 1.2rem; vertical-align: top; margin-top: 0.5rem; display: inline-block; }
-  .price-period { font-size: 0.68rem; color: var(--text-muted); margin-bottom: 2rem; letter-spacing: 0.1em; }
+  .price-period { font-size: 0.68rem; font-weight: 400; color: var(--text-muted); margin-bottom: 2rem; letter-spacing: 0.1em; }
   .price-features { list-style: none; margin-bottom: 2rem; }
   .price-features li {
-    font-size: 0.8rem; padding: 0.55rem 0;
+    font-size: 0.8rem; padding: 0.55rem 0; font-weight: 400;
     border-bottom: 1px solid rgba(201,168,76,0.1);
     display: flex; align-items: center; gap: 0.7rem; color: var(--cream);
   }
   .price-features li::before { content: '✦'; color: var(--gold); font-size: 0.55rem; flex-shrink: 0; }
-  .price-features li.off { color: var(--text-muted); }
+  .price-features li.off { color: var(--text-muted); text-decoration: line-through;}
   .price-features li.off::before { color: #333; }
   .btn-price {
     display: block; width: 100%; padding: 0.9rem;
@@ -423,27 +427,27 @@ header.site-header {
   .faq-list { max-width: 740px; margin: 0 auto; }
   .faq-item {
     border: 1px solid var(--border); margin-bottom: 0.8rem;
-    background: var(--dark2); overflow: hidden; transition: border-color 0.3s;
+    background: var(--box-bg); overflow: hidden; transition: border-color 0.3s;
   }
   .faq-item.open { border-color: var(--gold); }
   .faq-q {
     padding: 1.4rem 1.8rem; cursor: pointer;
     display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-    font-size: 0.87rem; color: var(--cream); line-height: 1.5; font-weight: 400;
+    font-size: 0.87rem; color: var(--box-col2); line-height: 1.5; font-weight: 500;
     transition: color 0.3s; user-select: none;
   }
-  .faq-item.open .faq-q { color: var(--gold); }
+  .faq-item.open .faq-q { color: var(--box-col1); }
   .faq-arrow {
     width: 22px; height: 22px; flex-shrink: 0;
     border: 1px solid var(--border);
     display: flex; align-items: center; justify-content: center;
-    font-size: 1rem; color: var(--gold); transition: transform 0.35s;
+    font-size: 1rem; color: var(--box-col1); transition: transform 0.35s;
   }
   .faq-item.open .faq-arrow { transform: rotate(45deg); }
   .faq-a {
     max-height: 0; overflow: hidden;
     transition: max-height 0.4s ease, padding 0.3s;
-    padding: 0 1.8rem; font-size: 0.82rem; color: var(--text-muted); line-height: 1.9;
+    padding: 0 1.8rem; font-size: 0.82rem; font-weight: 400; color: var(--box-col2); line-height: 1.9;
   }
   .faq-item.open .faq-a { max-height: 300px; padding: 0 1.8rem 1.5rem; }
 
@@ -481,22 +485,22 @@ header.site-header {
   .form-bg { background: var(--dark); }
   .contact-form {
     max-width: 620px; margin: 0 auto;
-    border: 1px solid var(--border); padding: 3.5rem;
-    background: var(--dark2);
+    border: 1px solid var(--border); border-radius: 12px; padding: 3.5rem;
+    background: hsla(0, 0%, 0%, 35%);
   }
   .form-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem; font-weight: 300; margin-bottom: 0.5rem; text-align: center;
   }
-  .form-sub { font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-bottom: 2.5rem; }
+  .form-sub { font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-bottom: 2.5rem; font-weight: 400; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .form-group { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.2rem; }
   .form-group label {
-    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--gold);
+    font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 400;
+    color: var(--box-col1);
   }
   .form-group input, .form-group textarea, .form-group select {
-    background: var(--dark3); border: 1px solid var(--border);
+    background: hsla(0, 0%, 100%, 15%); border: 1px solid var(--border);
     color: var(--cream); padding: 0.85rem 1rem;
     font-family: 'Montserrat', sans-serif; font-size: 0.85rem;
     outline: none; transition: border-color 0.3s;
@@ -517,7 +521,7 @@ header.site-header {
     margin-top: 0.5rem;
   }
   .form-submit:hover { background: var(--gold-light); }
-  .form-note { font-size: 0.72rem; color: var(--text-muted); text-align: center; margin-top: 1rem; }
+  .form-note { font-size: 0.72rem; color: var(--text-muted); text-align: center; margin-top: 1rem;  font-weight: 400; }
 
   /* SUCCESS */
   .success-msg {
