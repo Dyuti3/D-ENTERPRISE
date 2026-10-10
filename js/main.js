@@ -91,3 +91,27 @@ modal.addEventListener('click', (e) => {
       alert('Replace the video URL placeholders with your real YouTube links!');
     }
   }
+
+  // Event Pop Up
+  const EVENT_EXPIRATION_DATE = new Date("2026-10-11T23:59:59");
+  const LEAFLET_IMAGE_URL = "/assets/events/grand-gathering-11oct.jpeg";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentDate = new Date();
+
+    if (currentDate < EVENT_EXPIRATION_DATE) {
+      const eventImg = new Image();
+      eventImg.src = LEAFLET_IMAGE_URL;
+      eventImg.alt = "Event Image Leaflet Poster";
+
+      eventImg.onload = () => {
+        modalContent.appendChild(eventImg);
+
+        setTimeout(() => {
+          modal.showModal();
+        }, 800);
+      };
+    } else {
+      console.log("Event expired. Skipping image download and dialog generation.");
+    }
+  });

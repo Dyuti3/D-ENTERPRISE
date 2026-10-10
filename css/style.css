@@ -147,7 +147,10 @@ body { background: var(--dark); color: var(--cream); font-family: 'Montserrat', 
 dialog { border: none; border-radius: 12px; padding: 0; width: 900px;  max-width: 90vw;  height: 520px; /* your fixed frame height */  max-height: 85vh; background: #000; overflow: hidden; margin: auto;}
 dialog::backdrop { background: rgba(0,0,0,0.8); backdrop-filter: blur(4px);}
 .close-btn { position: sticky; top: 10px; left: 90%; background: rgba(0,0,0,0.6); color: lightgray; border: none; font-size: 50px; cursor: pointer; width: 36px; z-index: 10;}
-#modal-content img, #modal-content video { max-width: 100%; max-height: 65vh; width: auto; height: auto; display: block; margin: 0 auto;}
+#modal-content img, #modal-content video { max-width: 100%; width: auto; height: auto; display: block; margin: 0 auto;}
+#modal-content img { max-height: 80vh;}
+#modal-content video { max-height: 65vh;}
+.close-btn:focus-visible { outline: none;}
 
 /* HEADER */
 header.site-header {
