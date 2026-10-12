@@ -104,13 +104,19 @@ modal.addEventListener('click', (e) => {
       eventImg.src = LEAFLET_IMAGE_URL;
       eventImg.alt = "Event Image Leaflet Poster";
 
-      eventImg.onload = () => {
-        modalContent.appendChild(eventImg);
+      eventImg.decode()
+        .then(() => {
+          modalContent.appendChild(eventImg);
 
-        setTimeout(() => {
+          setTimeout(() => {
+            modal.showModal();
+          }, 800);
+        })
+        .catch((encodingError) => {
+          console.error("Image loading failed:", encodingError);
+          modalContent.appendChild(eventImg);
           modal.showModal();
-        }, 800);
-      };
+        });
     } else {
       console.log("Event expired. Skipping image download and dialog generation.");
     }
