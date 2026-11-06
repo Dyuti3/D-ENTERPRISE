@@ -539,7 +539,7 @@ header.site-header {
     background: var(--dark);
   }
 
-  footer a { text-decoration: none; color: inherit;}
+  footer a { text-decoration: none; color: inherit; cursor: pointer;}
 
   .footer-content { display: grid; grid-template-columns: repeat(4, 1fr); padding-bottom: 50px;}
 
@@ -572,10 +572,12 @@ header.site-header {
 .footer-title{ text-decoration: underline; font-weight: 600; font-size: 1.2rem;}
 
 .footer-company { display: flex; flex-direction: column; gap: 20px;}
-.footer-company-links { list-style: none; text-decoration: none; display: flex; flex-direction: column; gap: 5px;}
+.footer-company-links { list-style: none; text-decoration: none; display: flex; flex-direction: column; gap: 10px;}
+.footer-company-links > li > a:hover { color: hsla(0, 100%, 60%); font-weight: 400;}
  
 .footer-legal { display: flex; flex-direction: column; gap: 20px;}
-.footer-legal-links { list-style: none; text-decoration: none; display: flex; flex-direction: column; gap: 5px;}
+.footer-legal-links { list-style: none; text-decoration: none; display: flex; flex-direction: column; gap: 10px;}
+.footer-legal-links > li > a:hover { color: hsla(0, 100%, 60%); font-weight: 400;}
 
 .footer-connect { display: flex; flex-direction: column; gap: 20px;}
 .footer-connect-links {display: flex; gap: 20px; justify-content: center;}
@@ -583,7 +585,7 @@ header.site-header {
 .footer-copyright { font-size: 0.8rem; padding-top: 30px; padding-bottom: 10px;}
 
 .nilesh-portfolio::after { content: "\2197"; font-size: 1rem;}
-.nilesh-portfolio:hover { text-decoration: dashed; color: #c9ff3d;}
+.nilesh-portfolio:hover { text-decoration: dashed; color: #c9ff3d; font-weight: 400;}
 
   /* ANIMATIONS */
   @keyframes wapulse {
