@@ -1,0 +1,50 @@
+
+.legal-modal {
+    width: min(800px, 90%);
+    max-height: 80vh;
+    padding: 25px;
+    border: none;
+    border-radius: 12px;
+}
+
+.legal-modal::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: -25px;
+    background: white;
+    padding: 10px 0;
+}
+
+.modal-content {
+    max-height: 65vh;
+    overflow-y: auto;
+    line-height: 1.7;
+}
+
+.legal-page {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.legal-page h1 {
+    margin-bottom: 10px;
+}
+
+.legal-page section {
+    margin: 25px 0;
+}
+
+#closeModal {
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
