@@ -268,7 +268,7 @@ header.site-header {
   }
 
   /* ABOUT */
-  section { padding: 7rem 2rem; }
+  section { padding: 5rem 2rem; }
   .container { max-width: 1100px; margin: 0 auto; }
   .section-tag {
     font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
@@ -295,7 +295,7 @@ header.site-header {
     background: var(--box-bg); padding: 2.5rem 2rem; text-align: center;
   }
   .stat-num {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: serif;
     font-size: 3rem; font-weight: 400; color: var(--box-col1);
     line-height: 1;
   }
